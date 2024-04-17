@@ -1,0 +1,66 @@
+1.// Create an object representing a car
+const car = {
+  make: "Toyota",
+  model: "Camry",
+  year: 2022
+};
+
+// Function to display all properties of the car
+function displayCarProperties(car) {
+  for (const property in car) {
+    console.log(`${property}: ${car[property]}`);
+  }
+}
+
+// Call the function to display car properties
+displayCarProperties(car);
+
+2.// Define an object representing a student's information
+const student = {
+  name: "Naman",
+  age: 28,
+  grade: "A",
+  
+  // Method to update the student's grade
+  updateGrade: function(newGrade) {
+    this.grade = newGrade;
+  }
+};
+
+// Call the method to update the student's grade
+student.updateGrade("B");
+
+// Output the updated student information
+console.log(student);
+3.// Function to return the number of properties in an object
+function countProperties(obj) {
+  return Object.keys(obj).length;
+}
+
+// Example object
+const exampleObject = { a: 1, b: 2, c: 3 };
+
+// Call the function to count properties
+console.log(countProperties(exampleObject)); // Output: 3
+4.// Function to check if an object has a specified property
+function hasProperty(obj, propertyName) {
+  return obj.hasOwnProperty(propertyName);
+}
+
+// Example object
+const exampleObject = { name: "Naman", age: 22 };
+
+// Check if the object has the specified property
+console.log(hasProperty(exampleObject, "age")); // Output: true
+console.log(hasProperty(exampleObject, "email")); // Output: false
+
+5.// Function to calculate the area of a circle
+function calculateCircleArea(radius) {
+  return Math.PI * Math.pow(radius, 2);
+}
+
+// Example: calculate area of a circle with radius 5
+const radius = 5;
+const area = calculateCircleArea(radius);
+console.log("Area of the circle:", area);
+
